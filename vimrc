@@ -44,6 +44,7 @@ set hidden             " Hide buffers when they are abandoned
 set shiftwidth=2
 set nowrap
 autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
+set number
 set numberwidth=1
 
 set encoding=utf-8

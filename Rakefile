@@ -26,7 +26,7 @@ task :backup do
     end
   end
 
-  if File.directoy?(vim_dir)
+  if File.directory?(vim_dir)
     puts "Moving vim directory to #{backup_dir}"
     FileUtils.mv vim_dir, backup_dir
   end
@@ -39,7 +39,8 @@ task :link_files do
   ln_sf(vim, vim_dir)
 
   new_dotfiles.each do |file|
-    ln_sf(file, File.join(ENV['HOME'], ".#{file}"))
+    dotfile = File.join(Dir.pwd, file)
+    ln_sf(dotfile, File.join(ENV['HOME'], ".#{file}"))
   end
 end
 
