@@ -1,0 +1,5 @@
+[user]
+	email = ljfauscett@gmail.com
+	name = ljfauscett
+[core]
+	excludesfile = /Users/josh/.global_gitignore
